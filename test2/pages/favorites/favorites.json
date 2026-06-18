@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "top-bar": "/components/top-bar/top-bar"
+  },
+  "navigationBarTitleText": "我的收藏"
+}

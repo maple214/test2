@@ -1,0 +1,75 @@
+page {
+  background: #f5f5f5;
+}
+
+.list-page {
+  min-height: 100vh;
+}
+
+.page-content {
+  padding-top: 260rpx;
+  padding-bottom: 120rpx;
+}
+
+/* Category tabs */
+.category-tabs {
+  white-space: nowrap;
+  padding: 20rpx 24rpx;
+  background: #ffffff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.category-tabs .tab {
+  display: inline-block;
+  padding: 12rpx 28rpx;
+  margin-right: 12rpx;
+  font-size: 26rpx;
+  color: #666666;
+  background: #f5f5f5;
+  border-radius: 32rpx;
+}
+
+.category-tabs .tab-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  font-weight: 500;
+}
+
+/* Grid */
+.list-content {
+  padding: 16rpx 16rpx;
+}
+
+.list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-grid > model-card {
+  width: calc(50% - 8rpx);
+  margin-bottom: 16rpx;
+}
+
+/* Empty */
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.bottom-spacer {
+  height: 20rpx;
+}

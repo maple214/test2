@@ -1,0 +1,239 @@
+page {
+  background: #f5f5f5;
+}
+
+.profile-page {
+  min-height: 100vh;
+}
+
+/* 用户信息区域（独立区块） */
+.user-section {
+  background: #ffffff;
+  margin: 16rpx;
+  margin-top: calc(var(--status-bar-height, 44px) + 120rpx);
+  border-radius: 16rpx;
+  padding: 40rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.avatar-wrap {
+  position: relative;
+  margin-right: 24rpx;
+}
+
+.user-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.avatar-placeholder {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72rpx;
+}
+
+.avatar-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48rpx;
+  height: 48rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-icon text {
+  font-size: 24rpx;
+  color: #ffffff;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.user-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.merchant-badge {
+  font-size: 20rpx;
+  color: #c4a35a;
+  background: rgba(196, 163, 90, 0.15);
+  padding: 2rpx 12rpx;
+  border-radius: 12rpx;
+  margin-left: 12rpx;
+  font-weight: 500;
+}
+
+.edit-icon {
+  font-size: 28rpx;
+  margin-left: 12rpx;
+  opacity: 0.6;
+}
+
+.user-signature {
+  font-size: 26rpx;
+  color: #666666;
+  margin-bottom: 8rpx;
+  opacity: 0.8;
+}
+
+.user-hint {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+/* 登录按钮区域 */
+.login-buttons {
+  display: flex;
+  gap: 24rpx;
+  margin-top: 32rpx;
+  justify-content: center;
+}
+
+/* 功能图标（设置、客服） */
+.side-icons {
+  display: flex;
+  gap: 24rpx;
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+.side-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.side-icon text:first-child {
+  font-size: 36rpx;
+}
+
+.btn-login {
+  width: 240rpx;
+  padding: 24rpx 0;
+  background: linear-gradient(135deg, #c4a35a, #a68948);
+  border-radius: 48rpx;
+  border: none;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.btn-guest {
+  width: 240rpx;
+  padding: 24rpx 0;
+  background: #f5f5f5;
+  border-radius: 48rpx;
+  border: none;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #666666;
+}
+
+/* 功能菜单区域 */
+.page-content {
+  padding-bottom: 120rpx;
+}
+
+/* Menu */
+.menu-section {
+  padding: 0 16rpx;
+}
+
+.menu-section .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 20rpx;
+  background: #ffffff;
+  border-radius: 12rpx;
+  margin-bottom: 10rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.03);
+}
+
+.menu-section .menu-item:active {
+  background: #fafafa;
+}
+
+.menu-section .menu-icon {
+  font-size: 36rpx;
+  margin-right: 16rpx;
+}
+
+.menu-section .menu-text {
+  flex: 1;
+}
+
+.menu-section .menu-label {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333333;
+  display: block;
+  margin-bottom: 4rpx;
+}
+
+.menu-section .menu-desc {
+  font-size: 22rpx;
+  color: #999999;
+}
+
+/* 高亮入口：商家入驻 / 我的店铺 */
+.menu-section .menu-item-primary {
+  border-left: 6rpx solid #c4a35a;
+  background: #fdfaf3;
+}
+
+.menu-section .menu-item-primary .menu-label {
+  color: #c4a35a;
+  font-weight: 700;
+}
+
+.menu-section .menu-arrow {
+  font-size: 32rpx;
+  color: #cccccc;
+}
+
+/* Footer */
+.footer {
+  padding: 40rpx 0 32rpx;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 22rpx;
+  color: #cccccc;
+}
+
+.bottom-spacer {
+  height: 20rpx;
+}

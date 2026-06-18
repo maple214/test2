@@ -1,0 +1,331 @@
+page {
+  overflow: hidden;
+  height: 100vh;
+  background: transparent;
+}
+
+/* ────────── 背景 ────────── */
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://thumbnail0.baidupcs.com/thumbnail/70ba81fc1r937c0285f53a73ef295d05?fid=1101400036163-250528-575795020700475&time=1749880800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-slPn3JUjxYQrF8YKNssu5ElmMYE%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=358846454519069257&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
+}
+
+/* ────────── 页面容器 ────────── */
+.data-box {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* ────────── 顶部区域 ────────── */
+.top-box {
+  padding: 120rpx 8% 40rpx 8%;
+}
+
+/* ────────── 返回按钮 ────────── */
+.back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-icon {
+  font-size: 40rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ────────── Logo ────────── */
+.logo-area {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.logo-icon {
+  font-size: 80rpx;
+  margin-bottom: 12rpx;
+}
+
+.logo-title {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo-sub {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8rpx;
+}
+
+/* ────────── Tab 切换 ────────── */
+.login-tabs {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.tab-item.active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60rpx;
+  height: 4rpx;
+  background: #f5759f;
+  border-radius: 2rpx;
+}
+
+/* ────────── 登录卡片 ────────── */
+.login-card {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 24rpx;
+  padding: 40rpx 30rpx;
+  backdrop-filter: blur(10px);
+}
+
+/* ────────── 输入组 ────────── */
+.input-group {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50rpx;
+  padding: 6rpx 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.input-icon {
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  font-size: 28rpx;
+  flex-shrink: 0;
+  margin-right: 8rpx;
+}
+
+.input-field {
+  flex: 1;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* ────────── 验证码按钮 ────────── */
+.input-group button.btn-code {
+  flex-shrink: 0;
+  width: 160rpx;
+  max-width: 160rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 20rpx;
+  color: #f5759f;
+  background: transparent;
+  border: 1rpx solid #f5759f;
+  border-radius: 24rpx;
+  padding: 0 8rpx;
+  margin: 0;
+}
+
+.input-group button.btn-code::after {
+  border: none;
+}
+
+.input-group button.btn-code[disabled] {
+  color: #ccc !important;
+  border-color: #ccc !important;
+  background: transparent !important;
+}
+
+.btn-code.sent {
+  color: #fff;
+  background: #f5759f;
+  border-color: #f5759f;
+}
+
+/* ────────── 隐私协议 ────────── */
+.privacy-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  flex-wrap: wrap;
+}
+
+.privacy-check {
+  width: 32rpx;
+  height: 32rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  margin-right: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22rpx;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.privacy-check.checked {
+  background: #f5759f;
+  border-color: #f5759f;
+}
+
+.privacy-text {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.privacy-link {
+  font-size: 24rpx;
+  color: #f5759f;
+}
+
+/* ────────── 登录按钮 ────────── */
+.login-card button.btn-login-main {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(135deg, #f5759f, #e8557d);
+  border-radius: 50rpx;
+  border: none;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.login-card button.btn-login-main::after {
+  border: none;
+}
+
+.login-card button.btn-login-main[disabled] {
+  background: #ccc !important;
+  color: #999 !important;
+}
+
+/* ────────── 辅助入口（注册账号、忘记密码） ────────── */
+.aux-links {
+  text-align: center;
+  margin-top: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.aux-link {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 20rpx;
+}
+
+.aux-divider {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ────────── 微信登录区 ────────── */
+.wechat-section {
+  padding-top: 0;
+}
+
+.divider-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1rpx;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.divider-text {
+  padding: 0 24rpx;
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.login-card button.btn-wechat {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1rpx solid rgba(255, 255, 255, 0.2);
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.btn-wechat::after {
+  border: none;
+}
+
+.wechat-icon {
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+
+/* ────────── 动画 ────────── */
+.opacity {
+  opacity: 0;
+  animation: topFadeIn 0.8s forwards;
+}
+
+@keyframes topFadeIn {
+  to {
+    opacity: 1;
+  }
+}

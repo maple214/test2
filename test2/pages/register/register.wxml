@@ -1,0 +1,83 @@
+<view class="bg-img"></view>
+
+<view class="data-box">
+  <view class="top-box">
+    <view class="opacity">
+
+      <!-- 返回按钮 -->
+      <view class="back-btn" bindtap="onGoBack">
+        <text class="back-icon">←</text>
+      </view>
+
+      <!-- Logo -->
+      <view class="logo-area">
+        <view class="logo-icon">🧊</view>
+        <view class="logo-title">创建账号</view>
+        <view class="logo-sub">注册后享受完整功能</view>
+      </view>
+
+      <view class="login-card">
+
+        <!-- 手机号 -->
+        <view class="input-group">
+          <view class="input-icon">📱</view>
+          <input class="input-field" type="number" placeholder="请输入手机号" maxlength="11" value="{{phone}}" bindinput="onPhoneInput" bindfocus="onInputFocus" adjust-position="{{true}}" />
+        </view>
+
+        <!-- 验证码 -->
+        <view class="input-group">
+          <view class="input-icon">✉️</view>
+          <input class="input-field" type="number" placeholder="请输入验证码" maxlength="6" value="{{code}}" bindinput="onCodeInput" bindfocus="onInputFocus" adjust-position="{{true}}" />
+          <button class="btn-code {{codeDisabled ? 'disabled' : ''}} {{codeSent ? 'sent' : ''}}" bindtap="onGetCode" disabled="{{codeDisabled || !isPhoneValid || codeSending}}">{{codeText}}</button>
+        </view>
+
+        <!-- 密码 -->
+        <view class="input-group">
+          <view class="input-icon">🔒</view>
+          <input class="input-field" password placeholder="设置6-20位密码" maxlength="20" value="{{password}}" bindinput="onPwdInput" bindfocus="onInputFocus" adjust-position="{{true}}" />
+        </view>
+
+        <!-- 确认密码 -->
+        <view class="input-group">
+          <view class="input-icon">🔐</view>
+          <input class="input-field" password placeholder="再次输入密码" maxlength="20" value="{{confirmPwd}}" bindinput="onConfirmPwdInput" bindfocus="onInputFocus" adjust-position="{{true}}" />
+        </view>
+
+        <!-- 隐私协议 -->
+        <view class="privacy-row" bindtap="onTogglePrivacy">
+          <view class="privacy-check {{privacyAgreed ? 'checked' : ''}}">
+            <text wx:if="{{privacyAgreed}}">✓</text>
+          </view>
+          <text class="privacy-text">已阅读并同意</text>
+          <text class="privacy-link">《用户协议》</text>
+          <text class="privacy-text">和</text>
+          <text class="privacy-link">《隐私政策》</text>
+        </view>
+
+        <!-- 注册按钮 -->
+        <button class="btn-login-main" bindtap="onRegister" disabled="{{!canSubmit || isSubmitting}}" loading="{{isSubmitting}}">注 册</button>
+
+        <!-- 登录入口 -->
+        <view class="aux-links">
+          <text class="aux-text">已有账号？</text>
+          <text class="aux-link" bindtap="onGoLogin">立即登录</text>
+        </view>
+
+        <!-- 微信注册 -->
+        <view class="wechat-section">
+          <view class="divider-row">
+            <view class="divider-line"></view>
+            <text class="divider-text">其他注册方式</text>
+            <view class="divider-line"></view>
+          </view>
+          <button class="btn-wechat" bindtap="onWechatRegister">
+            <text class="wechat-icon">💬</text>
+            <text>微信一键注册</text>
+          </button>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+</view>
